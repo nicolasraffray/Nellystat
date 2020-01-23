@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+body {
+    
+  background-color: #ffff70;
+  max-width: 500px;
+  margin: auto;
+}
+</style>
+<body>
+  <h1>The Philosophers Thermostat</h1>
+<div class="shadowbox" id="display">
+  <p> The Temperature is ... <span id="thermodisplay"></span></p>
+</div>
+<button id="increase">Increase</button>
+<button id="decrease" type="button">Decrease</button>
+<button id="reset" type="button">Reset</button>
+<br>
+<br>
+Power Saving Is Off?: <label class="switch">
+  <input type="checkbox">
+  <span class="slider round" id='powersavingmode'></span>
+ </label>
+<script>
+$(document).ready(function (){
+  
+  var thermostat = new Thermostat();
+
+  $("#thermodisplay").text(thermostat.temperature);
+
+  $("#increase").click(function() {
+    thermostat.increase()
+    $("#thermodisplay").text(thermostat.temperature);
+  });
+
+  $("#decrease").click(function() {
+    thermostat.decrease()
+    $("#thermodisplay").text(thermostat.temperature);
+  });
+
+  $("#reset").click(function() {
+    thermostat.reset()
+    $("#thermodisplay").text(thermostat.temperature);
+  });
+
+  $('*:checkbox').click(function() {
+    if ($(this).is(":checked")) {
+        thermostat.toggle();
+    } else if ($(this).is(":not(:checked")) {
+        thermostat.toggle();
+    }
+  });
+  
+});
+</script>
+<!--seperation of concerns -->
+<script src="./../public/thermostat.js" >
+</script>
+<body>
