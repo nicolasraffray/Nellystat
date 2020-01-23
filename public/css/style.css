@@ -1,0 +1,15 @@
+html, 
+
+body {
+    
+  background-color: rgb(195, 146, 207);
+  max-width: 500px;
+  margin: auto;
+}
+
+
+
+.low-usage {
+  color: rgb(172, 209, 7);
+}
+
