@@ -14,7 +14,7 @@ function Thermostat(){
     }
   }
   this.toggle = function(){
-    this.powersavingmode = !this.powersavingmode
+    this.powersavingmode = !(this.powersavingmode)
   }
 
   this.usage = function(){

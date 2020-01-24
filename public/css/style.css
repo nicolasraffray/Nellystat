@@ -1,12 +1,17 @@
 html, 
 
+
 body {
     
-  background-color: rgb(195, 146, 207);
+  background-color: rgb(223, 162, 207);
   max-width: 500px;
   margin: auto;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: rgb(255, 255, 255);
+}
 
 
 .low-usage {
