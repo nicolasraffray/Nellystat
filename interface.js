@@ -24,19 +24,22 @@ $(document).ready(function (){
  
   $("#thermodisplay").text(thermostat.temperature);
 
+  $("html").css({"background-image" : "url('./../farmer.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
+
   $("#increase").click(function() {
     thermostat.increase()
     $("#thermodisplay").text(thermostat.temperature);
     if(thermostat.temperature >= 30){
       playNelly()
       image.style.display = "block"
-    }
+      $("html").css({"background-image" : "url('./../nelly.jpg')"})
+    };
   });
 
   $("#decrease").click(function() {
     thermostat.decrease()
     $("#thermodisplay").text(thermostat.temperature)
-    if(thermostat.temperature <= 30){
+    if(thermostat.temperature < 30){
       pauseNelly()
       image.style.display = "none"
     } else if(thermostat.temperature < 15){

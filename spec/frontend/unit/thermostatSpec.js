@@ -78,5 +78,6 @@ var thermostat
       expect(thermostat.temperature).toBe(20)
     })
   })
+
 });
 

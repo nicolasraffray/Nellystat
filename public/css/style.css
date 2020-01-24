@@ -1,16 +1,23 @@
-html, 
 
-
-body {
+/* body {
     
   background-color: rgb(223, 162, 207);
-  max-width: 500px;
-  margin: auto;
-}
+  /* background-image: url("./../../nelly.jpg"); */
+  /* max-width: 500px; */
+  /* margin: auto; */
+  /* opacity: 0.9; */
+/* } */
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(000, 000, 000);
+  max-width: 500px;
+  /* margin: 0px; */
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 
@@ -18,3 +25,17 @@ h1,h2,h3,h4,h5,h6 {
   color: rgb(172, 209, 7);
 }
 
+.shadowbox {
+  text-align: center;
+}
+
+#text {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  float: right;
+}
+
+/* #container {
+  text-align: center;
+} */
