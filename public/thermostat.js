@@ -1,6 +1,6 @@
 function Thermostat(){
   const defaulttemp = 10
-  this.powersavingmode = true
+  this.powersavingmode = false
   this.temperature = 20;
 
   this.increase = function(){
