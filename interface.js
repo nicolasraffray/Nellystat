@@ -22,8 +22,8 @@ $(document).ready(function (){
     $("#thermodisplay").text(thermostat.temperature + "°C");
     if(thermostat.temperature >= 30){
       playNelly()
-      image.style.display = "block"
-      $("html").css({"background-image" : "url('./../nelly.jpg')"})
+      // image.style.display = "block"
+      $("html").css({"background-image" : "url('./../nelly.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
     };
   });
 
