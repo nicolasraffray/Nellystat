@@ -13,7 +13,7 @@ $(document).ready(function (){
     x.pause();
   }
  
-  $("#thermodisplay").text(thermostat.temperature);
+  $("#thermodisplay").text(thermostat.temperature + "°C");
 
   $("html").css({"background-image" : "url('./../farmer.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
 
@@ -39,7 +39,7 @@ $(document).ready(function (){
 
   $("#reset").click(function() {
     thermostat.reset()
-    $("#thermodisplay").text(thermostat.temperature)
+    $("#thermodisplay").text(thermostat.temperature + "°C")
     image.style.display = "none"
     pauseNelly()
     ;
@@ -60,14 +60,14 @@ $(document).ready(function (){
   $('#text').text(function(){
     var city = "london"
     $.get("http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=1c91a074559e143366b0cc4f23ff3082&units=metric",function(data){
-      $('#current-temp').text(data.main.temp);
+      $('#current-temp').text(data.main.temp + "°C");
   })})
 
   $('#select-city').submit(function(event) {
     event.preventDefault();
     var city = $('#input-city').val();
     $.get("http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=1c91a074559e143366b0cc4f23ff3082&units=metric", function(data) {
-      $('#current-temperature').text(data.main.temp);
+      $('#current-temperature').text(data.main.temp  + "°C");
       $('#newcity').text("The Temp in "+ city +" is ")
     })
   })
