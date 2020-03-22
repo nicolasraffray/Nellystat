@@ -12,10 +12,24 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: rgb(000, 000, 000);
   max-width: 500px;
-  opacity: 0.9;
+  /* opacity: 0.9; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.shadowbox {
+  text-align: left;
+}
+
+#text {
+  margin: auto;
+  width: 50%;
+  float: right;
+}
+
+#power-save {
+  text-align: center;
+  float: center;
 }
 
 .switch {
@@ -81,13 +95,4 @@ input:checked + .slider:before {
   color: rgb(172, 209, 7);
 }
 
-.shadowbox {
-  text-align: left;
-}
-
-#text {
-  margin: auto;
-  width: 50%;
-  float: right;
-}
 

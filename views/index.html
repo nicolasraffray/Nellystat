@@ -6,6 +6,7 @@
 </head>
 
 <body>
+
   <audio src="./../hot.mp3" id="myAudio">
     <embed src="mysound.mp3" hidden="true" loop="false" class="player_audio"/>
   </audio>
@@ -13,8 +14,17 @@
   <div class="container">
     <div id="text">
       <h1>The Thermostat</h1>
+      <div id="power-save">
+        <h2>Power Saving Mode
+          <div id="switch"> 
+            <label class="switch"> 
+              <input type="checkbox">
+              <span class="slider round" id='powersavingmode'></span> 
+            </label>
+          </div>
+        </h2>  
+      </div> 
       <h2>The Tempurature Outside:<span id="current-temp"></span></h2>
-
       <div class="shadowbox" id="display">
         <h2> Current Tempurature is set to:<span id="thermodisplay"></span></h2>
         <div id="buttons">
@@ -22,17 +32,8 @@
           <button id="decrease" type="button">Decrease</button>
           <button id="reset" type="button">Reset</button>
         </div>
-        <div id="power-save">
-          <h2>Power Saving Mode
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider round" id='powersavingmode'></span>
-            </label>
-          </h2>  
-        </div> 
       </div>
     </div>
-
     <div id="city-search">
       <h3><span id="newcity"></span> <span id="current-temperature"></span></h3>
       <form id="select-city">

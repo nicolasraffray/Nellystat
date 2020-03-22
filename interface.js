@@ -30,7 +30,6 @@ $(document).ready(function (){
     $("#thermodisplay").text(thermostat.temperature + "°C");
     if(thermostat.temperature >= 30){
       playNelly()
-      // image.style.display = "block"
       displayNelly()
     };
   });
@@ -49,7 +48,6 @@ $(document).ready(function (){
     pauseNelly()
     displayHardWork()
     $("#thermodisplay").text(thermostat.temperature + "°C")
-    image.style.display = "none"
   });
 
   function updateTemperature(){
