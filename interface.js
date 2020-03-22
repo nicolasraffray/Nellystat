@@ -12,10 +12,18 @@ $(document).ready(function (){
   function pauseNelly() {
     x.pause();
   }
+
+  function displayHardWork(){
+    $("html").css({"background-image" : "url('./../farmer.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
+  }
+
+  function displayNelly(){
+    $("html").css({"background-image" : "url('./../nelly.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
+  }
  
   $("#thermodisplay").text(thermostat.temperature + "°C");
+  displayHardWork()
 
-  $("html").css({"background-image" : "url('./../farmer.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
 
   $("#increase").click(function() {
     thermostat.increase()
@@ -23,7 +31,7 @@ $(document).ready(function (){
     if(thermostat.temperature >= 30){
       playNelly()
       // image.style.display = "block"
-      $("html").css({"background-image" : "url('./../nelly.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
+      displayNelly()
     };
   });
 
@@ -32,17 +40,16 @@ $(document).ready(function (){
     $("#thermodisplay").text(thermostat.temperature + "°C")
     if(thermostat.temperature < 30){
       pauseNelly()
-      $("html").css({"background-image" : "url('./../farmer.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
-      image.style.display = "none"
+      displayHardWork()
     } 
   });
 
   $("#reset").click(function() {
     thermostat.reset()
+    pauseNelly()
+    displayHardWork()
     $("#thermodisplay").text(thermostat.temperature + "°C")
     image.style.display = "none"
-    pauseNelly()
-    ;
   });
 
   function updateTemperature(){
