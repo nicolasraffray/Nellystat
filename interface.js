@@ -4,16 +4,6 @@ $(document).ready(function (){
   var x = document.getElementById("myAudio")
   var y = document.getElementById("Shack")
   var image = document.getElementById("myDIV")
-  
-
-  
-  // function playShack(){
-  //   y.play();
-  // }
-
-  // function pauseShack(){
-  //   y.pause()
-  // }
 
   function playNelly() {
     x.play();
@@ -67,6 +57,12 @@ $(document).ready(function (){
         thermostat.toggle()}
   });
 
+  $('#text').text(function(){
+    var city = "london"
+    $.get("http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=1c91a074559e143366b0cc4f23ff3082&units=metric",function(data){
+      $('#current-temp').text(data.main.temp);
+  })})
+
   $('#select-city').submit(function(event) {
     event.preventDefault();
     var city = $('#input-city').val();
@@ -75,8 +71,4 @@ $(document).ready(function (){
       $('#newcity').text("The Temp in "+ city +" is ")
     })
   })
-
-  $.get("http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=1c91a074559e143366b0cc4f23ff3082&units=metric",function(data){
-      $('#current-temp').text(data.main.temp);
-  });
-});
+})
