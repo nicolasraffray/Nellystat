@@ -42,10 +42,9 @@ $(document).ready(function (){
     $("#thermodisplay").text(thermostat.temperature)
     if(thermostat.temperature < 30){
       pauseNelly()
+      $("html").css({"background-image" : "url('./../farmer.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
       image.style.display = "none"
-    } else if(thermostat.temperature < 15){
-      playShack()
-    };
+    } 
   });
 
   $("#reset").click(function() {
@@ -80,7 +79,4 @@ $(document).ready(function (){
   $.get("http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=1c91a074559e143366b0cc4f23ff3082&units=metric",function(data){
       $('#current-temp').text(data.main.temp);
   });
- 
-
-   
 });
