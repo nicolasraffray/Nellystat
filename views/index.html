@@ -12,9 +12,10 @@
   </audio>
 
   <div class="container">
+
     <div id="text">
-      <h1>The Thermostat</h1>
       <div id="power-save">
+        <h1>The Thermostat</h1>
         <h2>Power Saving Mode
           <div id="switch"> 
             <label class="switch"> 
@@ -24,18 +25,25 @@
           </div>
         </h2>  
       </div> 
-      <h2>The Tempurature Outside:<span id="current-temp"></span></h2>
+      
+      <div id="outside-temp">
+        <h3>The Tempurature Outside:<span id="current-temp"></span></h3>
+      </div>
+      
       <div class="shadowbox" id="display">
-        <h2> Current Tempurature is set to:<span id="thermodisplay"></span></h2>
-        <div id="buttons">
-          <button id="increase">Increase</button>
-          <button id="decrease" type="button">Decrease</button>
-          <button id="reset" type="button">Reset</button>
-        </div>
+        <h3> Indoor Tempurature is set to:<span id="thermodisplay"></span></h3>
+      </div>
+
+      <div id="buttons">
+        <button id="increase">Increase</button>
+        <button id="decrease" type="button">Decrease</button>
+        <button id="reset" type="button">Reset</button>
       </div>
     </div>
+
     <div id="city-search">
-      <h3><span id="newcity"></span> <span id="current-temperature"></span></h3>
+      <h3> Find a City's Tempurature</h3>
+      <h3><span id="current-temperature"></span></h3>
       <form id="select-city">
         <input id = "input-city" type="text" placeholder="Search A City's Temp"></input>
         <input type="submit"></input>
