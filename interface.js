@@ -34,13 +34,13 @@ $(document).ready(function (){
 
   }
  
-  $("#thermodisplay").text(thermostat.temperature + "°C");
+  $("#thermodisplay").text(thermostat.temperature + "oC");
   displayHardWork()
 
 
   $("#increase").click(function() {
     thermostat.increase()
-    $("#thermodisplay").text(thermostat.temperature + "°C");
+    $("#thermodisplay").text(thermostat.temperature + "oC");
     if(thermostat.temperature >= 30){
       playNelly()
       displayNelly()
@@ -50,7 +50,7 @@ $(document).ready(function (){
 
   $("#decrease").click(function() {
     thermostat.decrease()
-    $("#thermodisplay").text(thermostat.temperature + "°C")
+    $("#thermodisplay").text(thermostat.temperature + "oC")
     if(thermostat.temperature < 30){
       pauseNelly()
       displayHardWork()
@@ -63,7 +63,7 @@ $(document).ready(function (){
     pauseNelly()
     displayHardWork()
     divReset()
-    $("#thermodisplay").text(thermostat.temperature + "°C")
+    $("#thermodisplay").text(thermostat.temperature + "oC")
   });
 
   function updateTemperature(){
@@ -81,14 +81,14 @@ $(document).ready(function (){
   $('#text').text(function(){
     var city = "london"
     $.get("http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=1c91a074559e143366b0cc4f23ff3082&units=metric",function(data){
-      $('#current-temp').text(data.main.temp + "°C");
+      $('#current-temp').text(data.main.temp + "oC");
   })})
 
   $('#select-city').submit(function(event) {
     event.preventDefault();
     var city = $('#input-city').val();
     $.get("http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=1c91a074559e143366b0cc4f23ff3082&units=metric", function(data) {
-      $('#current-temperature').text("It is " + data.main.temp  + "°C in " + city);
+      $('#current-temperature').text("It is " + data.main.temp  + "oC in " + city);
     })
   })
 })

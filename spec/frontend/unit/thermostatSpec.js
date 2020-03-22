@@ -16,13 +16,13 @@ var thermostat
       expect(thermostat.temperature).toBe(21);
     })
     it("when power saving mode is on the tempreature will not go beyond 25", function(){
+      thermostat.toggle()
       for (let num = 0; num < 11; num++){
       thermostat.increase()
       };
       expect(thermostat.temperature).toBe(25)
       })
     it("when power saving mode is off the tempreature will not go beyond 32", function(){
-      thermostat.toggle()
       for (let num = 0; num < 200; num++){
       thermostat.increase()
       };
@@ -45,11 +45,11 @@ var thermostat
 
   describe('powersavingmode', function(){
     it('defaults to true', function(){
-      expect(thermostat.powersavingmode).toEqual(true)
+      expect(thermostat.powersavingmode).toEqual(false)
     })
     it('changes to false when called', function(){
       thermostat.toggle()
-      expect(thermostat.powersavingmode).toEqual(false)
+      expect(thermostat.powersavingmode).toEqual(true)
     })
   })
 
