@@ -19,7 +19,7 @@ $(document).ready(function (){
 
   $("#increase").click(function() {
     thermostat.increase()
-    $("#thermodisplay").text(thermostat.temperature);
+    $("#thermodisplay").text(thermostat.temperature + "°C");
     if(thermostat.temperature >= 30){
       playNelly()
       image.style.display = "block"
@@ -29,7 +29,7 @@ $(document).ready(function (){
 
   $("#decrease").click(function() {
     thermostat.decrease()
-    $("#thermodisplay").text(thermostat.temperature)
+    $("#thermodisplay").text(thermostat.temperature + "°C")
     if(thermostat.temperature < 30){
       pauseNelly()
       $("html").css({"background-image" : "url('./../farmer.jpg')", "background-size" : "cover", "background-repeat" : "no-repeat", "height" : "100%"})
