@@ -13,44 +13,44 @@
   <audio src="./../hot.mp3" id="myAudio">
     <embed src="mysound.mp3" hidden="true" loop="false" class="player_audio"/>
   </audio>
-  <div id="container">
-<div id="text">
-  <h1>The Philosophers Thermostat</h1>
-  <h2>The Ontelogical Temp is: <span id="current-temp"></span>°C</h2>
+<div id="container">
+  <div id="text">
+    <h1>The Thermostat</h1>
+    <h2>The Tempurature Outside:<span id="current-temp"></span>°C</h2>
 
-  <div class="shadowbox" id="display">
-    <h2> The Relative Temperature is :  <span id="thermodisplay"></span>°C</h2>
+    <div class="shadowbox" id="display">
+      <h2> The Relative Temperature is :  <span id="thermodisplay"></span>°C</h2>
+    </div>
+
+    <section>
+      <h1><span id="newcity"></span> <span id="current-temperature"></span></h1>
+      <form id="select-city">
+        <input id = "input-city" type="password" placeholder="enter a city"></input>
+        <input type="submit"></input>
+      </form>
+    </section>
+
+    <br>
+
+    <button id="increase">Increase</button>
+    <button id="decrease" type="button">Decrease</button>
+    <button id="reset" type="button">Reset</button>
+    <br>
+
+    <h4>Turn it up? <label class="switch"><input type="checkbox">
+    <span class="slider-round" id='powersavingmode'></span>:</h4>
+    </label><div class="left-right">
+
+    </div>
   </div>
 
-  <section>
-    <h1><span id="newcity"></span> <span id="current-temperature"></span></h1>
-    <form id="select-city">
-      <input id = "input-city" type="password" placeholder="enter a city"></input>
-      <input type="submit"></input>
-    </form>
-  </section>
 
-   <br>
+  <div id="myDIV" style="display: none;">
+    <img src="./../farmer.jpg" width="450" height="250"> 
+    <img src="./../nelly.jpg" width="450" height="250" alt="Nelly">
+  </div>
 
-  <button id="increase">Increase</button>
-  <button id="decrease" type="button">Decrease</button>
-  <button id="reset" type="button">Reset</button>
-  <br>
-
-  <h4>Turn it up? <label class="switch"><input type="checkbox">
-  <span class="slider-round" id='powersavingmode'></span>:</h4>
-  </label><div class="left-right">
-
-</div>
-</div>
-
-
-<div id="myDIV" style="display: none;">
-  <img src="./../farmer.jpg" width="450" height="250"> 
-  <img src="./../nelly.jpg" width="450" height="250" alt="Nelly">
-</div>
-
-<!--seperation of concerns -->
-<script src="./../public/thermostat.js" ></script>
-<script src="./../interface.js" > </script>
+  <!--seperation of concerns -->
+  <script src="./../public/thermostat.js" ></script>
+  <script src="./../interface.js" > </script>
 
