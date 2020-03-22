@@ -8,15 +8,22 @@
   /* opacity: 0.9; */
 /* } */
 
+
+
 h1,h2,h3,h4,h5,h6 {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  color: rgb(000, 000, 000);
+  color: rgb(0, 0, 0);
   max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 #text {
   margin: auto;
@@ -24,6 +31,13 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
   float: right;
 }
+
+#city-search{
+  width: 50%;
+  margin: 0;
+  float: left;
+}
+
 
 #power-save {
   text-align: center;
@@ -108,10 +122,6 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-.low-usage {
-  color: rgb(172, 209, 7);
 }
 
 
